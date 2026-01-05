@@ -1,0 +1,48 @@
+{
+    "name": "CHARITHA (Cherry)",
+    "date": "January 05",
+    "tagline": "You are the melody in ordinary moments, the sparkle in quiet skies.",
+    "intro": "Today is for you—your laughter, your courage, your gentle heart. May every wish find its way to you.",
+    "footer": "May this day be your most valuable memory.",
+    "theme": "dark",
+    "photos": [
+        "assets/photo1.jpeg",
+        "assets/photo2.jpeg",
+        "assets/photo3.jpeg"
+    ],
+    "audio": "assets/birthday.mp3",
+    "quotes": [
+        {
+            "text": "May your heart always find reasons to dance, and your days be stitched with light.",
+            "author": "For CHARITHA"
+        },
+        {
+            "text": "You don’t just brighten rooms—you turn them into home.",
+            "author": "With Respect"
+        },
+        {
+            "text": "In the story of my life, your name is the chapter I reread.",
+            "author": "Always"
+        },
+        {
+            "text": "Every sunrise is a promise; today it promised you.",
+            "author": "January 05"
+        },
+        {
+            "text": "You are the quiet miracle that makes ordinary days extraordinary.",
+            "author": "Cherry"
+        },
+        {
+            "text": "If joy had a color, it would be the way you smile.",
+            "author": "Forever"
+        }
+    ],
+    "captions": [
+        "Shine, Cherry.",
+        "Grace in every step.",
+        "Your laughter—my favorite song.",
+        "Today belongs to you.",
+        "A wish for every star.",
+        "Memories stitched in light."
+    ]
+}

@@ -1,0 +1,119 @@
+:root{
+  --bg:#0f1020; --bg2:#1a1c3b; --accent:#ff7ac8; --accent2:#ffd166;
+  --text:#ffffff; --muted:#c9c9d6; --glass:rgba(255,255,255,0.08);
+  --glass-strong:rgba(255,255,255,0.18); --shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%;background:linear-gradient(135deg,var(--bg),var(--bg2));color:var(--text);margin:0}
+body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
+
+/* Themes */
+body.light{
+  --bg:#f7f7fb; --bg2:#ffffff; --text:#1a1a2b; --muted:#4b4b5a;
+  --glass:rgba(0,0,0,0.06); --glass-strong:rgba(0,0,0,0.12);
+}
+
+/* Preloader */
+#preloader{
+  position:fixed;inset:0;background:linear-gradient(135deg,var(--bg),var(--bg2));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999
+}
+.loader{display:flex;gap:10px;margin-bottom:12px}
+.loader .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);animation:bounce 0.8s infinite}
+.loader .dot:nth-child(2){animation-delay:0.15s}
+.loader .dot:nth-child(3){animation-delay:0.3s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.loading-text{color:var(--muted);font-weight:600}
+
+/* Controls */
+.controls{
+  position:fixed;top:16px;right:16px;display:flex;gap:10px;z-index:10
+}
+.btn{
+  background:linear-gradient(135deg,var(--glass),var(--glass-strong));
+  border:1px solid rgba(255,255,255,0.15);color:var(--text);padding:0.6rem 0.9rem;border-radius:999px;
+  backdrop-filter:blur(8px);cursor:pointer;font-weight:700;box-shadow:var(--shadow)
+}
+
+/* Decorative particles */
+.particles{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse at top left, rgba(255,122,200,0.15), transparent 40%),
+    radial-gradient(ellipse at bottom right, rgba(255,209,102,0.12), transparent 40%);
+}
+
+/* Header / hero */
+header{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem;z-index:2}
+.hero{
+  max-width:1100px;width:100%;background:linear-gradient(180deg, var(--glass), transparent);
+  border:1px solid rgba(255,255,255,0.12);border-radius:28px;padding:3rem 2rem;backdrop-filter:blur(10px);
+  box-shadow:var(--shadow);position:relative;overflow:hidden
+}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4.2rem);line-height:1.1;margin:0 0 0.75rem;font-weight:900;letter-spacing:0.5px}
+.hero .date{font-weight:600;color:var(--accent2);letter-spacing:1px;margin-bottom:1.25rem}
+.hero p{max-width:800px;margin:0 auto 1.25rem;color:var(--muted);font-size:1.05rem}
+.tagline{font-size:1.15rem;color:#ffeef8}
+.cta{
+  margin-top:1.5rem;display:inline-flex;gap:12px;align-items:center;background:linear-gradient(135deg,var(--accent),#ff9bd8);
+  color:#1b0b16;border:none;border-radius:999px;padding:0.85rem 1.25rem;font-weight:700;cursor:pointer;
+  box-shadow:0 10px 24px rgba(255,122,200,0.35);transition:transform .2s ease
+}
+.cta:hover{transform:translateY(-2px)}
+.audio-status{display:block;margin-top:0.5rem;color:#ffd8f0;font-size:0.95rem}
+
+/* Collage */
+.collage{position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:0.35}
+.collage img{
+  position:absolute;border-radius:18px;object-fit:cover;filter:saturate(1.15) contrast(1.05);
+  box-shadow:0 12px 28px rgba(0,0,0,0.45);transform:rotate(var(--r)) scale(1);animation:float 8s ease-in-out infinite
+}
+@keyframes float{0%,100%{transform:translateY(0) rotate(var(--r))}50%{transform:translateY(-10px) rotate(calc(var(--r) + 1deg))}}
+
+/* Sections */
+section{position:relative;padding:5rem 1.5rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);margin:0 0 1rem}
+
+/* Quotes */
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{
+  background:var(--glass);border:1px solid rgba(255,255,255,0.12);border-radius:22px;padding:1.25rem;backdrop-filter:blur(8px);
+  box-shadow:var(--shadow);position:relative;overflow:hidden
+}
+.quote p{margin:0;color:#f7f7ff}
+.quote .author{margin-top:0.6rem;color:var(--accent2);font-weight:600}
+
+/* Carousel */
+.carousel{margin-top:2rem;position:relative;overflow:hidden;border-radius:24px;border:1px solid rgba(255,255,255,0.12)}
+.track{display:flex;gap:12px;animation:scroll 28s linear infinite}
+.slide{min-width:320px;flex:0 0 auto;border-radius:18px;overflow:hidden;position:relative}
+.slide img{width:100%;height:220px;object-fit:cover;display:block}
+.slide .caption{position:absolute;bottom:0;left:0;right:0;padding:0.6rem 0.8rem;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.55));color:#fff;font-weight:600}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Parallax panels */
+.parallax{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:2rem}
+.panel{position:relative;height:320px;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,0.12)}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform .6s ease}
+.panel:hover img{transform:scale(1.25)}
+.panel .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.0),rgba(0,0,0,0.55))}
+.panel .label{position:absolute;bottom:12px;left:12px;background:rgba(255,255,255,0.12);backdrop-filter:blur(6px);padding:0.5rem 0.75rem;border-radius:12px;font-weight:700;color:#fff}
+
+/* Confetti */
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:1}
+
+/* Hearts */
+.heart{position:fixed;top:-10vh;font-size:18px;color:#ff8fcf;opacity:0.85;animation:fall 9s linear infinite;z-index:1}
+@keyframes fall{0%{transform:translateY(-10vh) translateX(0) rotate(0)}100%{transform:translateY(120vh) translateX(40px) rotate(180deg)}}
+
+/* Responsive */
+@media (max-width:980px){
+  .quote-grid{grid-template-columns:repeat(2,1fr)}
+  .parallax{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .quote-grid{grid-template-columns:1fr}
+  .parallax{grid-template-columns:1fr}
+  .slide{min-width:80%}
+}

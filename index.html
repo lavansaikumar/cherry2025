@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday, CHARITHA (Cherry)</title>
+  <meta name="description" content="A dynamic, animated birthday celebration for CHARITHA (Cherry).">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+    <div class="loading-text">Preparing Cherry’s surprise…</div>
+  </div>
+
+  <!-- Decorative layers -->
+  <div class="particles"></div>
+  <canvas id="confetti"></canvas>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button id="themeToggle" class="btn">🌗 Theme</button>
+    <button id="musicToggle" class="btn">🎵 Music</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgAudio" src="assets/birthday.mp3" preload="auto" loop></audio>
+
+  <!-- Header / Hero -->
+  <header>
+    <div class="hero">
+      <h1 id="title"></h1>
+      <div class="date" id="date"></div>
+      <p class="tagline" id="tagline"></p>
+      <p id="intro"></p>
+      <button class="cta" id="playBtn">Play celebration music</button>
+      <span class="audio-status" id="audioStatus">Trying to autoplay… if blocked, tap the button.</span>
+
+      <!-- Collage (dynamic) -->
+      <div class="collage" id="collage"></div>
+    </div>
+  </header>
+
+  <!-- Quotes -->
+  <section>
+    <div class="section-inner">
+      <h2 class="section-title">Words for Cherry</h2>
+      <div class="quote-grid" id="quoteGrid"></div>
+
+      <!-- Carousel -->
+      <div class="carousel">
+        <div class="track" id="carouselTrack"></div>
+      </div>
+
+      <!-- Parallax panels -->
+      <div class="parallax" id="parallax"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div id="footerText"></div>
+    <div class="signature">— From Lavan</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
