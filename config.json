@@ -6,11 +6,11 @@
     "footer": "May this day be your most valuable memory.",
     "theme": "dark",
     "photos": [
-        "assets/photo1.jpeg",
-        "assets/photo2.jpeg",
-        "assets/photo3.jpeg"
+        "photo1.jpeg",
+        "photo2.jpeg",
+        "photo3.jpeg"
     ],
-    "audio": "assets/birthday.mp3",
+    "audio": "birthday.mp3",
     "quotes": [
         {
             "text": "May your heart always find reasons to dance, and your days be stitched with light.",
@@ -45,4 +45,5 @@
         "A wish for every star.",
         "Memories stitched in light."
     ]
+
 }
